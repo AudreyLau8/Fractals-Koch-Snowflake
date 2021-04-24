@@ -26,7 +26,6 @@ def invKoch(sideLength, level):
 
 def snowflake(sideLength, level):
   for i in range(3):# loop 3 times
-    tommy.color(black)
     koch(sideLength, level) # call koch to make one side with the given sideLength and level
     tommy.right(120) # turn tommy to the right by 120 degrees
 
@@ -35,13 +34,9 @@ def invFlake(sideLength, level):
     invKoch(sideLength, level) 
     tommy.right(-120)
 
-def exec():
-  for i in range(3):
-    tommy.begin_fill()
-    snowflake(300,4)
-    tommy.end_fill()
-    invFlake(300,4)
-    tommy.right(90)
-
-exec()
+tommy.begin_fill()
+snowflake(300,4)
+tommy.end_fill()
+invFlake(300,4)
+tommy.right(90)
 turtle.update()
